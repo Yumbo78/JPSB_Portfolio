@@ -75,21 +75,6 @@ h3 {
     width: 60%;
 }
 
-
-@media (max-width: 768px) {
-    .web-proyects {
-        flex-direction: column;
-    }
-
-    .hero h1 {
-        font-size: 4rem;
-    }
-
-    .hero p {
-        font-size: 1.5rem;
-    }
-}
-
 .project-card {
     cursor: pointer;
     border-radius: 1rem;
@@ -192,10 +177,10 @@ footer {
     justify-content: center;
 }
 .skills-list{
-    width: 60%;
-    display: grid;
+    display: grid;    
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 1rem;
+    width: 60%;
 }
 .skill{
     background-color: rgba(26, 26, 75, 0.308);
@@ -230,6 +215,7 @@ footer {
     display: flex;
     justify-content: center;
     gap: 2rem;
+    flex-wrap: wrap;
 }
 
 .elem{
@@ -247,7 +233,7 @@ footer {
 
 .elem img{
     width: 50%;
-    mask-image: linear-gradient(to left, black, transparent 95%);;
+    mask-image: linear-gradient(to left, black, transparent 95%);
     object-fit: cover;
 }
 
@@ -274,5 +260,42 @@ footer {
     background: linear-gradient(to right, #4a7fc0, #9066b8);
 }
 
+@media (max-width: 768px) {
+    .web-proyects {
+        flex-direction: column;
+        width: 100%;        
+    }
 
+    .project-large-card{
+        width: 100%;
+    }
+
+    .skills-list{
+        width: 100%;
+        grid-template-columns: 1fr 1fr ;
+    }
+    .last{
+        width: 50%;
+    }
+    .main{
+        width: 100%;
+    }
+    .elem{
+        flex-direction: column-reverse;
+    }
+    .elem img{
+        width: 100%;
+        mask-image: linear-gradient(to bottom, black, transparent 95%);
+    }
+    
+
+
+    .hero h1 {
+        font-size: 4rem;
+    }
+
+    .hero p {
+        font-size: 1.5rem;
+    }
+}
 
